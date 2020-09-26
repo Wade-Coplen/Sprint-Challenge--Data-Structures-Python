@@ -5,14 +5,10 @@ class RingBuffer:
         
     class Full:
         def append(self, item):
-            
             self.data[self.cur] = item
-            self.cur = (self.cur + 1) % self.max
-            
-            
-
+            self.cur = (self.cur + 1) % self.capactiy
         def get(self):
-            return self.data[self.cur:] + self.data[:self.cur]
+            return self.data[:self.cur] + self.data[:self.cur]
     def append(self, item):
         self.data.append(item)
         if len(self.data) == self.capacity:
