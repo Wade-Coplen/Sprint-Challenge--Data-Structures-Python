@@ -37,7 +37,7 @@ For example:
 ```python
 buffer = RingBuffer(3)
 
-buffer.get()   # should return []
+buffer.get()   # should return [] a list
 
 buffer.append('a')
 buffer.append('b')
