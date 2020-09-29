@@ -13,12 +13,22 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-vec = [[names_1], [names_2]]
-echo = [name for elem in vec for name in elem]
-for i in range(0, len(echo)):    
-    for j in range(i+1, len(echo)):    
-        if(echo[i] == echo[j]):    
-            duplicates.append(echo[j]);   
+#vec = [[names_1], [names_2]]
+#echo = [name for elem in vec for name in elem]
+for item in names_1:
+      if item in names_2:
+            if item not in duplicates:
+                  duplicates.append(item)
+
+'''def findDuplicates(names_1):
+      for x in names_1:
+            a = abs(x)
+            if names_1[a -1] < 0:
+                duplicates.append(a)
+            else:
+                names_1[a -1] *= -1
+      return duplicates'''
+
 #for name_1 in names_1:
   #  for name_2 in names_2:
     #    if name_1 == name_2:
